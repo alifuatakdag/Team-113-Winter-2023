@@ -9,7 +9,7 @@ public class S17 {
         // ornek : Java  output: JaVa
 
         String input= "Java candir, Selenium heyecandir";
-
+        //giris yazıldı
 
 
 

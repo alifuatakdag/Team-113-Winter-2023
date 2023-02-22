@@ -1,7 +1,5 @@
 package day14_methodOverloading_whileLoop;
 
-import day13_methodOlusturma.C05_StringiTerseCevirme;
-
 import java.util.Scanner;
 
 public class C07_WhileLoop {
@@ -17,44 +15,101 @@ public class C07_WhileLoop {
         // - bosluk icermemeli
         // - 8 karakter veya daha uzun olmali
 
-
         Scanner scan = new Scanner(System.in);
 
-        String sifre="";
-        int flag=0;
-        int denemeSayisi=0;
+/*
+        int flag = 0;
 
-        while(flag != 4){
-            flag=0;
+        while (flag != 4) {
+
+
+            System.out.println("lütfen bir şifre giriniz: ");
+            String sifre = scan.nextLine();
+
+
+            if (sifre.charAt(0) >= 'a' && sifre.charAt(0) <= 'z') {
+                flag++;
+            } else {
+                System.out.println("ilk harf kucuk harf olmali\n");
+            }
+
+            if (sifre.charAt(sifre.length() - 1) >= 'A' && sifre.charAt(sifre.length() - 1) <= 'Z') {
+                flag++;
+            } else {
+                System.out.println("son harf buyuk harf olmali\n");
+            }
+
+            if (sifre.contains(" ")) {
+                System.out.println("bosluk icermemeli");
+            } else {
+                flag++;
+            }
+
+            if (sifre.length() < 8) {
+                System.out.println("8 karakter veya daha uzun olmali\n");
+            } else {
+                flag++;
+            }
+
+
+        }
+
+        System.out.println("5.denemenizde basarili sifre olusturuldu\n");
+
+
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        String sifre = "";
+        int flag = 0;
+        int denemeSayisi = 0;
+
+        while (flag != 4) {
+            flag = 0;
             System.out.println("Lutfen bir sifre giriniz");
-            sifre= scan.nextLine();
+            sifre = scan.nextLine();
 
             // - ilk harf kucuk harf olmali
-            if (sifre.charAt(0)>='a' && sifre.charAt(0)<='z'){
+            if (sifre.charAt(0) >= 'a' && sifre.charAt(0) <= 'z') {
                 flag++;
-            }else{
+            } else {
                 System.out.println("Ilk karakter kucuk harf olmali");
             }
 
             // - son harf buyuk harf olmali
 
-            if (sifre.charAt(sifre.length()-1)>='A' && sifre.charAt(sifre.length()-1)<='Z'){
+            if (sifre.charAt(sifre.length() - 1) >= 'A' && sifre.charAt(sifre.length() - 1) <= 'Z') {
                 flag++;
-            }else{
+            } else {
                 System.out.println("Son karakter buyuk harf olmali");
             }
 
             // - bosluk icermemeli
-            if (sifre.contains(" ")){
+            if (sifre.contains(" ")) {
                 System.out.println("Sifre bosluk icermemeli");
-            }else{
+            } else {
                 flag++;
             }
 
             // - 8 karakter veya daha uzun olmali
-            if (sifre.length()>=8){
+            if (sifre.length() >= 8) {
                 flag++;
-            }else{
+            } else {
                 System.out.println("Uzunluk en az 8 karakter olmali");
             }
             denemeSayisi++;
@@ -64,24 +119,9 @@ public class C07_WhileLoop {
         System.out.println("Tebrikler! " + denemeSayisi + ". denemede sifreniz basari ile kaydedildi");
 
 
+
+
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 }

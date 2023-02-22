@@ -9,10 +9,6 @@ public class C01_HelloWorld {
         // IntelliJ'de bu aciklama yazilarini gri renkli yapar
 
         System.out.println("Hello World");
-        String str = "Hello World";
-
-        System.out.println(str.contains("x"));
-        System.out.println(str.charAt(4));
 
         /*
             Bu

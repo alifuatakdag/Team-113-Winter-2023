@@ -16,9 +16,9 @@ public class S02 {
         soyIsim = soyIsim.toLowerCase();
         isim = isim.toUpperCase().charAt(0) + isim.substring(1);
         soyIsim = soyIsim.toUpperCase().charAt(0)+ soyIsim.substring(1);
-        String isimSoyisim = isim + " " + soyIsim;
+        //String isimSoyisim = isim + " " + soyIsim;
 
-        return isimSoyisim;
+        return isim + " " + soyIsim;
     }
 
     public static void main(String[] args) {

@@ -53,6 +53,6 @@ public class S01_AFA_Cozum {
 
         }
         System.out.println();
-        System.out.println(BoyKiloIndexMethodu.kilomNasil(80, 180));
+        //System.out.println(BoyKiloIndexMethodu.kilomNasil(80, 180)); // Method Kullanma
     }
 }

@@ -4,7 +4,8 @@ public class BoyKiloIndexMethodu {
 
     public static String kilomNasil(double kilo, double boy) {
 
-        // Boy Kilo Indeksini hesaplayarak sonucunu bize "zayıf", "ideal kilo", "sisman" ve "obez" döndüren method.
+        // Boy Kilo Indeksini hesaplayarak sonucunu
+        // "zayıf", "ideal kilo", "sisman" ve "obez" döndüren method.
 
         double kitleIndeksi = (kilo) / ((boy / 100) * (boy / 100));
 

@@ -1,6 +1,5 @@
 package Sample_Questions;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class TcNoKontrol {
@@ -15,12 +14,17 @@ public class TcNoKontrol {
         // 5 - 1, 3, 5, 7 ve 9. rakamın toplamının 8 katının birler basamağı 11. rakamı vermektedir.
 
 
-        // Kullanıcdan TC No aldık.
-        Scanner scan = new Scanner(System.in);
-        System.out.println("Lütfen TC Kimlik No'yu Giriniz : ");
-        long girilenSayi = scan.nextLong();
 
-        //  Arraye atama yaptık method ile.
+        Scanner scan = new Scanner(System.in);
+
+     long girilenSayi;
+        do { // dogru basamak sayisi girilene kadar tekrar eder TC no girilmesini isteriz.
+            System.out.println("Lütfen TC Kimlik No'yu Giriniz : ");
+            girilenSayi = scan.nextLong();
+        } while (!tcBasamakSayisiKontrol(girilenSayi));
+
+
+    //  Arraye atama yaptık method ile.
         long[] tcKimlikNo = tcKimlikNoyuArrayeAta(girilenSayi);
         //System.out.println(Arrays.toString(tcKimlikNo));
 
@@ -72,11 +76,31 @@ public class TcNoKontrol {
 
         // Kontroller yapıldıktan sonra Dogru mu?
         if (kontrolSayaci == 0) {
-            System.out.println("TC Kimlik No DOGRUDUR.");
+            dogrudurYazdir();
         } else {
             hataYazdir();
         }
     }
+
+    // Tc kimlik nonun basamka sayisini kontrol edip bize true/false donduren method
+    public static boolean tcBasamakSayisiKontrol(long girilenSayi) {
+        long sayi;
+        int basamakSayisi;
+        boolean kontrol = false;
+        sayi = girilenSayi;
+        basamakSayisi = 0;
+        while (sayi > 0) {
+            sayi /= 10;
+            basamakSayisi++;
+        }
+        if (basamakSayisi != 11) {
+            hataYazdir();
+        } else {
+            kontrol = true;
+        }
+        return kontrol;
+    }
+
 
     // girilen sayıyı TC No olarak Arraye Atama Methodu
     public static long[] tcKimlikNoyuArrayeAta(long girilenSayi) {
@@ -93,7 +117,22 @@ public class TcNoKontrol {
 
     // hata yazadır methodu
     public static void hataYazdir() {
-        System.out.println("HATALI KIMLIK NO");
+        System.out.println();
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!");
+        System.out.println("=== HATALI KIMLIK NO ===");
+        System.out.println("!!!!!!!!!!!!!!!!!!!!!!!!");
+        System.out.println();
     }
+
+    // dorudur yazdir methodu
+    public static void dogrudurYazdir() {
+        System.out.println();
+        System.out.println("*****************************");
+        System.out.println("=== TC KIMLIK NO DOGRUDUR ===");
+        System.out.println("*****************************");
+        System.out.println();
+    }
+
+
 
 }

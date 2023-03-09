@@ -14,17 +14,16 @@ public class TcNoKontrol {
         // 5 - 1, 3, 5, 7 ve 9. rakamın toplamının 8 katının birler basamağı 11. rakamı vermektedir.
 
 
-
         Scanner scan = new Scanner(System.in);
 
-     long girilenSayi;
+        long girilenSayi;
         do { // dogru basamak sayisi girilene kadar tekrar eder TC no girilmesini isteriz.
             System.out.println("Lütfen TC Kimlik No'yu Giriniz : ");
             girilenSayi = scan.nextLong();
         } while (!tcBasamakSayisiKontrol(girilenSayi));
 
 
-    //  Arraye atama yaptık method ile.
+        //  Arraye atama yaptık method ile.
         long[] tcKimlikNo = tcKimlikNoyuArrayeAta(girilenSayi);
         //System.out.println(Arrays.toString(tcKimlikNo));
 
@@ -132,7 +131,6 @@ public class TcNoKontrol {
         System.out.println("*****************************");
         System.out.println();
     }
-
 
 
 }

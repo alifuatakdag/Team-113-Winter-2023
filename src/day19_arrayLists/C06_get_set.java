@@ -22,5 +22,6 @@ public class C06_get_set {
         System.out.println(sayilar.set(1, 7));
         System.out.println(sayilar);
 
+
     }
 }
